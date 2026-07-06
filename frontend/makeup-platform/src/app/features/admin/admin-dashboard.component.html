@@ -1,0 +1,12 @@
+<section class="page-shell">
+  <div class="hero-card">
+    <h1>Tableau de bord administrateur</h1>
+    <p>Suivez vos réservations, ventes et prestations depuis un espace centralisé.</p>
+  </div>
+  <div class="stats-grid">
+    <article class="stat-card" *ngFor="let stat of stats">
+      <h3>{{ stat.value }}</h3>
+      <p>{{ stat.label }}</p>
+    </article>
+  </div>
+</section>

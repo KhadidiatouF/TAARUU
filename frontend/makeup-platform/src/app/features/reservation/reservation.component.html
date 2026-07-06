@@ -1,0 +1,79 @@
+<section class="reservation-page">
+  <div class="reservation-hero section-dark section-padding">
+    <div class="container">
+      <span class="eyebrow">The Experience</span>
+      <h1>Book Your Transformation</h1>
+      <p>Luxury makeup services tailored to your unique beauty.</p>
+    </div>
+  </div>
+
+  <div class="container section-padding">
+    <div class="reservation-content">
+      <div class="reservation-form-container">
+        <form class="booking-form" (ngSubmit)="submit()" #form="ngForm" *ngIf="!submitted">
+          <div class="form-group">
+            <label>Service Selection</label>
+            <select [(ngModel)]="selectedServiceId" name="service">
+              <option *ngFor="let service of services" [value]="service.id">{{ service.name }} — {{ service.price }} €</option>
+            </select>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label>Desired Date</label>
+              <input type="date" [(ngModel)]="bookingDate" name="date" required />
+            </div>
+            <div class="form-group">
+              <label>Preferred Time</label>
+              <input type="time" [(ngModel)]="bookingTime" name="time" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" [(ngModel)]="customerName" name="name" placeholder="John Doe" required />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" [(ngModel)]="phone" name="phone" placeholder="+33 0 00 00 00 00" required />
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" [(ngModel)]="email" name="email" placeholder="hello@example.com" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Special Remarks / Requests</label>
+            <textarea [(ngModel)]="remarks" name="remarks" rows="4" placeholder="Tell us about your event..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-dark">Confirm Booking Request</button>
+        </form>
+
+        <div class="confirmation-card" *ngIf="submitted">
+          <div class="success-icon">✦</div>
+          <h2>Reservation Received</h2>
+          <p>Thank you for choosing ROTHE. We have received your request and will contact you shortly to confirm your appointment.</p>
+          <a routerLink="/" class="btn btn-dark">Return Home</a>
+        </div>
+      </div>
+
+      <div class="reservation-info section-dark">
+        <h3>Salon Hours</h3>
+        <ul class="hours-list">
+          <li><span>Monday - Friday</span> <span>09:00 - 19:00</span></li>
+          <li><span>Saturday</span> <span>10:00 - 18:00</span></li>
+          <li><span>Sunday</span> <span>Closed</span></li>
+        </ul>
+        <div class="contact-box">
+          <h3>Contact Us</h3>
+          <p>contact@rothe.com</p>
+          <p>+33 1 23 45 67 89</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+<div class="announcement-bar">
+  FREE SHIPPING ON ORDERS OVER $100+
+</div>
+
+<header class="navbar">
+  <div class="nav-top">
+    <div class="nav-search">
+      <i-lucide [img]="SearchIcon" class="icon"></i-lucide>
+    </div>
+    
+    <a class="brand" routerLink="/">
+      ROTHE
+    </a>
+    
+    <div class="nav-actions">
+      <a routerLink="/boutique" class="nav-bag">
+        <i-lucide [img]="ShoppingBagIcon" class="icon"></i-lucide>
+      </a>
+    </div>
+  </div>
+
+  <nav class="nav-links">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Accueil</a>
+    <a routerLink="/reservation" routerLinkActive="active">Réservations</a>
+    <a routerLink="/realisations" routerLinkActive="active">Réalisations</a>
+    <a routerLink="/boutique" routerLinkActive="active">Boutique</a>
+  </nav>
+</header>

@@ -1,0 +1,131 @@
+.reservation-hero {
+  text-align: center;
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--color-white);
+  }
+  p {
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--color-white);
+  }
+}
+
+.reservation-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.reservation-form-container {
+  background: var(--color-white);
+  
+  .booking-form {
+    display: grid;
+    gap: 2rem;
+    
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      
+      label {
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        color: var(--color-black);
+      }
+      
+      input, select, textarea {
+        padding: 1rem;
+        border: 1px solid #e0e0e0;
+        font-family: inherit;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+        
+        &:focus {
+          outline: none;
+          border-color: var(--color-black);
+        }
+      }
+    }
+    
+    button {
+      margin-top: 1rem;
+      width: 100%;
+    }
+  }
+}
+
+.confirmation-card {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--color-gray-light);
+  
+  .success-icon {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--color-nude-dark);
+  }
+  
+  h2 {
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    color: #666;
+  }
+}
+
+.reservation-info {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  
+  h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-white);
+  }
+  
+  .hours-list {
+    li {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.9rem;
+      color: var(--color-white);
+      opacity: 0.8;
+    }
+  }
+  
+  .contact-box {
+    p {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      color: var(--color-white);
+      opacity: 0.8;
+    }
+  }
+}

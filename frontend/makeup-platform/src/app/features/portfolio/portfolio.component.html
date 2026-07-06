@@ -1,0 +1,25 @@
+<section class="portfolio-page">
+  <div class="portfolio-hero section-dark section-padding">
+    <div class="container">
+      <span class="eyebrow">Our Work</span>
+      <h1>Réalisations & Portfolio</h1>
+      <p>A showcase of artistry, elegance, and transformation.</p>
+    </div>
+  </div>
+
+  <div class="container section-padding">
+    <div class="portfolio-grid">
+      <article class="portfolio-item" *ngFor="let item of portfolio">
+        <div class="image-container">
+          <img [src]="item.image" [alt]="item.title + ' artistry by ' + item.attribution" />
+          <div class="item-overlay">
+            <span class="item-type">{{ item.type }}</span>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+            <span class="item-date">{{ item.date }}</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

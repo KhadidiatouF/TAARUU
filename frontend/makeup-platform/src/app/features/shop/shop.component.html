@@ -1,0 +1,29 @@
+<section class="shop-page">
+  <div class="shop-hero section-dark section-padding">
+    <div class="container">
+      <span class="eyebrow">The Collection</span>
+      <h1>Luxe Beauty Boutique</h1>
+      <p>Curated high-performance formulas for the modern professional.</p>
+    </div>
+  </div>
+
+  <div class="container section-padding">
+    <div class="shop-grid">
+      <article class="product-item" *ngFor="let product of products">
+        <div class="product-image-container">
+          <img [src]="product.image" [alt]="product.name + ' by ' + product.attribution" />
+          <div class="product-badge" *ngIf="product.salePrice">Sale</div>
+        </div>
+        <div class="product-details">
+          <span class="product-brand">{{ product.brand }}</span>
+          <h3>{{ product.name }}</h3>
+          <p class="product-category">{{ product.category }}</p>
+          <div class="product-footer">
+            <span class="price">{{ product.price | currency }}</span>
+            <button class="btn btn-dark btn-sm">Add to Bag</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
