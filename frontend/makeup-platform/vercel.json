@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "outputDirectory": "dist/makeup-platform/browser",
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
